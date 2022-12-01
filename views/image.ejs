@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div id="main-img">
+        <h4>Imagem</h4>
+        <img style="max-width:300px;max-height:300px;" src=<%= url %>></img>
+        <p>Tamanho da imagem original: Largura = <%= imgsize.width %>p X Altura = <%= imgsize.height %>p</p>
+        <hr>
+        <form action="/edit/<%= imgname %>" method="post">
+            <h4>Novo Tamanho:</h4>
+            <input type="number" name="newimagewidth" class="sizeimg" placeholder="altura em pixels" /><br>
+            <input type="number" name="newimageheight" class="sizeimg" placeholder="largura em pixels" /><br>
+            <br>
+            <input type="submit" name="resize" value="Redimensionar" /><br>
+            <small>Após clicar no botão acima será iniciado o download da imagem. </small>
+            <input type="hidden" name="imgformat" value="<%= imgformat %>">
+        </form>
+    </div>
+</body>
+</html>

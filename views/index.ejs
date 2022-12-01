@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h4>Envie um arquivo de Imagem (png, jpg ou jpeg) para alterar suas dimensões</h4>
+        <form method="post" action="/upload" enctype="multipart/form-data">
+            <label for="img-upload">
+                <input type="file" id="img-upload" name="img-upload" />
+            </label>
+            <input type="submit" name="submit" id="submit" class="submit" value="Enviar" />
+        </form>
+        <p style="color: #FF0000;"><%= noImgUp %></p>
+    </div>
+</body>
+</html>
